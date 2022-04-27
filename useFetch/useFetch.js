@@ -2,15 +2,6 @@ import { useEffect, useRef, useState } from "react"
 
 export const useFetch = (url) => {
 
-    const isMounted = useRef(true)
-    
-    useEffect(() => {
-                                        
-        return () => {                  
-            isMounted.current=false     
-        }
-    })
-
     const [value, setValue] = useState({
         data: null,
         loading: true,
